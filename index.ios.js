@@ -1,6 +1,6 @@
 import { AppRegistry } from 'react-native';
-import App from './app/index'
+import App from './app/index';
 
 // import PouchDB from 'pouchdb-react-native';
 
-AppRegistry.registerComponent('AwesomeProject', () => App);
+AppRegistry.registerComponent('gameXchange', () => App);
