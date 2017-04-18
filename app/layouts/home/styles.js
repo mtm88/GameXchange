@@ -4,7 +4,7 @@ import { defaultStyles } from './../../config/styles';
 export default StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: defaultStyles.colors.background,
     justifyContent: 'center',
     alignItems: 'stretch',
   },

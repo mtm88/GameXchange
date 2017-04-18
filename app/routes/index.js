@@ -9,6 +9,9 @@ import GameList from './../layouts/gameList';
 const Routes = StackNavigator({
   Home: { screen: homeTabs },
   GameList: { screen: GameList },
-});
+}, {
+    mode: 'modal',
+    headerMode: 'float',
+  });
 
 export default Routes;

@@ -1,6 +1,7 @@
-export const defaultStyles = {
+const defaultStyles = {
   colors: {
     buttonBackground: '#000',
+    background: '#FFF',
   },
   fontFamily: 'Helvetica',
   icon: {
@@ -8,4 +9,18 @@ export const defaultStyles = {
     height: 18,
   },
 };
+
+const header = {
+  headerTintColor: '#FFF',
+  headerStyle: {
+    backgroundColor: '#000',
+  },
+  headerTitleStyle: {
+    fontSize: 15,
+    fontWeight: 'bold',
+  }
+}
+
+export { defaultStyles, header };
+
 

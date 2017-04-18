@@ -2,13 +2,13 @@ import React from 'react';
 import { TabNavigator } from 'react-navigation';
 
 import Home from './../../layouts/home';
-import Profile from './../../layouts/profile';
+import MyAccount from './../../layouts/myAccount';
 
 import { tabBarOptions } from './styles';
 
 const homeTabs = TabNavigator({
   Home: { screen: Home },
-  Profile: { screen: Profile },
+  MyAccount: { screen: MyAccount },
 }, {
     tabBarOptions: tabBarOptions,
   });

@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
 
 import Button from './../../components/button';
-import Profile from './../profile';
+import MyAccount from './../myAccount';
 
 import styles from './styles';
+import { header } from './../../config/styles';
 
 export default class Home extends Component {
   constructor(props) {
@@ -13,6 +14,9 @@ export default class Home extends Component {
 
   static navigationOptions = {
     title: 'Home',
+    headerTintColor: header.headerTintColor,
+    headerStyle: header.headerStyle,
+    headerTitleStyle: header.headerTitleStyle,
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('./../../icons/home.png')}
