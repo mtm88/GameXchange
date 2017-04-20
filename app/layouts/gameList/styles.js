@@ -3,7 +3,7 @@ import { defaultStyles } from './../../config/styles';
 
 export default StyleSheet.create({
   background: {
-    backgroundColor: defaultStyles.colors.background,
+    backgroundColor: 'black',
     flex: 1,
   }
-})
+});

@@ -34,12 +34,12 @@ export default class Home extends Component {
           text={'Get rid of my game(s)'}
           containerStyles={styles.buttons}
           textStyles={styles.buttonText}
-          onPress={() => this.props.navigation.navigate('GameList')}
         />
         <Button
           text={'Browse offers'}
           containerStyles={styles.buttons}
           textStyles={styles.buttonText}
+          onPress={() => this.props.navigation.navigate('GameList')}
         />
       </View>
     );
