@@ -37,6 +37,7 @@ export default class GameList extends React.Component {
     for (let i = 0; i < 20; i += 1) {
       clonedDataSet.push(dataSet[0]);
       clonedDataSet.push(dataSet[1]);
+      clonedDataSet.push(dataSet[2]);
     };
     return clonedDataSet;
   }
@@ -50,10 +51,21 @@ const dataSet = [
     title: 'Fallout 4',
     image: 'fallout4',
     user: 'User 1',
+    exchangeFor: 'Diablo 3, Chronicles, Bloodbourne',
+    platform: 'ps4',
   },
   {
     title: 'GTA V',
     image: 'gta5',
     user: 'User 2',
+    exchangeFor: 'Diablo 3',
+    platform: 'xbox',
+  },
+  {
+    title: 'Middle-earth: Shadow of Mordor',
+    image: 'shadowofmordor',
+    user: 'ZdzisekKB',
+    exchangeFor: 'World of Warcraft, Final Fantasy XXV',
+    platform: 'ps4',
   },
 ]
