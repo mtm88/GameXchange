@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, ListView, StyleSheet } from 'react-native';
 import styles from './styles';
 import { header } from './../../config/styles';
-import Row from './../../components/row';
+import ListRow from './../../components/offersList/listRow';
 
 export default class GameList extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export default class GameList extends React.Component {
       <View style={styles.background}>
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={(data) => <Row {...data} />}
+          renderRow={(data) => <ListRow {...data} />}
         />
       </View>
     )
