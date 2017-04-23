@@ -13,4 +13,12 @@ const Exchange = (props) => {
   );
 };
 
+Exchange.propTypes = {
+  exchangeFor: React.PropTypes.string,
+};
+
+Exchange.defaultProps = {
+  exchangeFor: 'No data',
+};
+
 export default Exchange;

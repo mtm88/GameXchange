@@ -11,5 +11,14 @@ const Platform = (props) => {
   );
 };
 
+Platform.propTypes = {
+  platform: React.PropTypes.string,
+};
+
+Platform.defaultProps = {
+  platform: 'No data',
+};
+
+
 export default Platform;
 

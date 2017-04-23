@@ -9,6 +9,17 @@ const PlatformLogo = (props) => {
   );
 };
 
+PlatformLogo.propTypes = {
+  platform: React.PropTypes.string,
+  style: React.PropTypes.object,
+};
+
+PlatformLogo.defaultProps = {
+  platform: 'No platform specified',
+  style: {},
+};
+
+
 export default PlatformLogo;
 
 const logos = {

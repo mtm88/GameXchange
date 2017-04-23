@@ -8,9 +8,6 @@ const LocationIcon = (props) => {
     <View style={styles.rightPanelBottomLeftLocation}>
       <Icon icon='location_green' style={{ marginRight: 3 }} />
     </View>
-    // <View style={styles.rightPanelBottomLeftLocationText}>
-    //   <Text style={styles.smallText}>12 miles</Text>
-    // </View>*/}
   );
 };
 

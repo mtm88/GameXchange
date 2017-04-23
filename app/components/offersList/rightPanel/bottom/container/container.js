@@ -27,4 +27,13 @@ const Bottom = (props) => {
   );
 };
 
+Bottom.propTypes = {
+  user: React.PropTypes.string,
+};
+
+Bottom.defaultProps = {
+  user: 'Username missing',
+};
+
+
 export default Bottom;

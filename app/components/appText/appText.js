@@ -10,4 +10,15 @@ const AppText = (props) => {
   )
 };
 
+AppText.propTypes = {
+  numberOfLines: React.PropTypes.number,
+  style: React.PropTypes.object,
+};
+
+AppText.defaultProps = {
+  style: {},
+  children: 'No Text passed',
+};
+
+
 export default AppText;

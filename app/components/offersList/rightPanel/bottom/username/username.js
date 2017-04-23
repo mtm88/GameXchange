@@ -15,4 +15,13 @@ const Username = (props) => {
   );
 };
 
+Username.propTypes = {
+  user: React.PropTypes.string,
+};
+
+Username.defaultProps = {
+  user: 'Username missing',
+};
+
+
 export default Username;

@@ -5,10 +5,20 @@ import styles from './styles';
 const GameBox = (props) => {
   return (
     <View style={styles.gameBox}>
-      <Image source={boxesMap[props.image]} style={styles.image} />
+      <Image source={boxesMap[props.image]} style={[styles.image, props.style]} />
     </View>
   );
 };
+
+GameBox.propTypes = {
+  image: React.PropTypes.string,
+  style: React.PropTypes.object,
+};
+
+GameBox.defaultProps = {
+  style: {},
+};
+
 
 export default GameBox;
 

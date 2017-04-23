@@ -21,7 +21,20 @@ const Top = (props) => {
       </View>
     </View>
   );
-}
+};
+
+Top.propTypes = {
+  platform: React.PropTypes.string,
+  title: React.PropTypes.string,
+  exchangeFor: React.PropTypes.string,
+};
+
+Top.defaultProps = {
+  platform: 'No platform specified',
+  title: 'Title missing',
+  exchangeFor: 'No data',
+};
+
 
 export default Top;
 

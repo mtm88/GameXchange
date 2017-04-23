@@ -13,4 +13,13 @@ const Title = (props) => {
   );
 };
 
+Title.propTypes = {
+  title: React.PropTypes.string,
+};
+
+Title.defaultProps = {
+  title: 'Title missing',
+};
+
+
 export default Title;

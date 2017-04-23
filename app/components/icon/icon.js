@@ -8,6 +8,17 @@ const Icon = (props) => {
   );
 };
 
+Icon.propTypes = {
+  icon: React.PropTypes.string,
+  style: React.PropTypes.object,
+};
+
+Icon.defaultProps = {
+  style: {},
+  icon: 'missingicon',
+};
+
+
 export default Icon;
 
 const icons = {
@@ -16,4 +27,5 @@ const icons = {
   'location_green': require('./../../icons/location_green.png'),
   'user_star_yellow': require('./../../icons/user_star_yellow.png'),
   'user_star_white': require('./../../icons/user_star_white.png'),
+  'missingicon': require('./../../icons/missingicon.png'),
 }
