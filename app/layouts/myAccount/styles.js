@@ -4,7 +4,7 @@ import { defaultStyles } from './../../config/styles';
 export default StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: defaultStyles.colors.background,
+    backgroundColor: defaultStyles.colors.backgroundColor,
   },
   icon: {
     width: defaultStyles.icon.width,

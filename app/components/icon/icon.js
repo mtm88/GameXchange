@@ -4,7 +4,7 @@ import styles from './styles';
 
 const Icon = (props) => {
   return (
-    <Image source={icons[props.icon]} style={[styles.icon, props.style]} />
+    <Image source={icons[props.icon]} style={[styles.icon, props.style]} onPress={props.onPress} />
   );
 };
 
@@ -28,4 +28,5 @@ const icons = {
   'user_star_yellow': require('./../../icons/user_star_yellow.png'),
   'user_star_white': require('./../../icons/user_star_white.png'),
   'missingicon': require('./../../icons/missingicon.png'),
+  'nav_back': require('./../../icons/nav_back.png'),
 }

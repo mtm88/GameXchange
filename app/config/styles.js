@@ -1,7 +1,7 @@
 const defaultStyles = {
   colors: {
     buttonBackground: '#000',
-    background: '#FFF',
+    backgroundColor: '#000',
   },
   fontFamily: 'Helvetica',
   icon: {
@@ -14,6 +14,7 @@ const header = {
   headerTintColor: '#FFF',
   headerStyle: {
     backgroundColor: '#000',
+
   },
   headerTitleStyle: {
     fontSize: 15,

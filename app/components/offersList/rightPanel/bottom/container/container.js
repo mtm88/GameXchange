@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import Icon from './../../../../icon';
 import Menu from './../menu';
 import LocationIcon from './../locationIcon';
 import LocationText from './../locationText';

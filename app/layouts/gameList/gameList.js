@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View, ListView, StyleSheet } from 'react-native';
 import styles from './styles';
 import { header } from './../../config/styles';
 import ListRow from './../../components/offersList/listRow';
+import { Back } from './../../components/navigation';
 
-export default class GameList extends React.Component {
-  constructor(props) {
-    super(props);
+export default class GameList extends Component {
+  constructor({ navigation }) {
+    super();
+    this.navigation = navigation;
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
       dataSource: ds.cloneWithRows(this._cloneDataSet()),
@@ -14,10 +16,11 @@ export default class GameList extends React.Component {
   }
 
   static navigationOptions = ({ navigation }) => ({
-    title: 'Offer Browser',
+    title: 'Offers',
     headerTintColor: header.headerTintColor,
     headerStyle: header.headerStyle,
     headerTitleStyle: header.headerTitleStyle,
+    headerLeft: Back(navigation),
   });
 
   render() {
@@ -25,7 +28,7 @@ export default class GameList extends React.Component {
       <View style={styles.background}>
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={(data) => <ListRow {...data} />}
+          renderRow={(data) => <ListRow {...data} navigation={this.navigation} />}
         />
       </View>
     )
@@ -43,8 +46,6 @@ export default class GameList extends React.Component {
   }
 
 }
-
-
 
 const dataSet = [
   {
