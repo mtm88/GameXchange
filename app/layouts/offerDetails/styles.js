@@ -8,7 +8,13 @@ export default StyleSheet.create({
     paddingTop: 20,
   },
   top: {
-    flex: 1,
+    flex: 3,
+  },
+  middle: {
+    flex: 4,
+  },
+  bottom: {
+    flex: 7,
   }
 
 });

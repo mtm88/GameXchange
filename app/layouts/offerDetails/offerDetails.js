@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { header } from './../../config/styles';
 import { Back } from './../../components/navigation';
 
-import { Top, Middle } from './../../components/offerDetails'
+import { Top, Middle, Bottom } from './../../components/offerDetails'
 
 import styles from './styles';
 
@@ -24,7 +24,6 @@ export default class OfferDetails extends Component {
   };
 
   render() {
-    console.log(this.params);
     return (
       <View style={styles.background}>
         <View style={styles.top}>
@@ -35,9 +34,14 @@ export default class OfferDetails extends Component {
             added={this.params.added}
             finish={this.params.finish}
           />
+        </View>
+        <View style={styles.middle}>
           <Middle />
         </View>
-      </View>
+        <View style={styles.bottom}>
+          <Bottom />
+        </View>
+      </View >
     );
   }
 
