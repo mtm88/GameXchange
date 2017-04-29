@@ -26,13 +26,13 @@ const Top = (props) => {
 Top.propTypes = {
   platform: React.PropTypes.string,
   title: React.PropTypes.string,
-  exchangeFor: React.PropTypes.string,
+  exchangeFor: React.PropTypes.array,
 };
 
 Top.defaultProps = {
   platform: 'No platform specified',
   title: 'Title missing',
-  exchangeFor: 'No data',
+  exchangeFor: [],
 };
 
 

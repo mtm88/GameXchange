@@ -19,14 +19,14 @@ ListRow.propTypes = {
   title: React.PropTypes.string,
   platform: React.PropTypes.string,
   user: React.PropTypes.string,
-  exchangeFor: React.PropTypes.string,
+  exchangeFor: React.PropTypes.array,
 };
 
 ListRow.defaultProps = {
   title: 'missing title',
   platform: 'no platform specified',
   user: 'no user supplied',
-  exchangeFor: 'no data',
+  exchangeFor: [],
 };
 
 

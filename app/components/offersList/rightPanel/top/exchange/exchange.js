@@ -7,18 +7,19 @@ const Exchange = (props) => {
   return (
     <View style={styles.exchange}>
       <AppText style={{ fontStyle: 'italic', fontSize: 11 }} numberOfLines={1}>
-        Exchange for: {props.exchangeFor}
+        Exchange for: {props.exchangeFor.join(', ')}
       </AppText>
     </View>
+
   );
 };
 
 Exchange.propTypes = {
-  exchangeFor: React.PropTypes.string,
+  exchangeFor: React.PropTypes.array,
 };
 
 Exchange.defaultProps = {
-  exchangeFor: 'No data',
+  exchangeFor: [],
 };
 
 export default Exchange;

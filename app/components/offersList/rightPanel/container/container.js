@@ -15,14 +15,14 @@ const RightPanel = (props) => {
 
 RightPanel.propTypes = {
   title: React.PropTypes.string,
-  exchangeFor: React.PropTypes.string,
+  exchangeFor: React.PropTypes.array,
   platform: React.PropTypes.string,
   user: React.PropTypes.string,
 };
 
 RightPanel.defaultProps = {
   title: 'Title missing',
-  exchangeFor: 'No data',
+  exchangeFor: [],
   platform: 'No platform specified',
   user: 'Username missing',
 };
