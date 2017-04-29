@@ -9,8 +9,6 @@ export default StyleSheet.create({
   },
   top: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
   }
 
 });

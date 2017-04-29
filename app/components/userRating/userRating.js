@@ -1,11 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-import Icon from './../../../../icon';
+import Icon from './../icon';
 import styles from './styles';
 
 const UserRating = (props) => {
   return (
-    <View style={styles.userRating}>
+    <View style={[styles.userRating, props.style]}>
       <Icon icon='user_star_yellow' style={{ width: 10, height: 10 }} />
       <Icon icon='user_star_yellow' style={{ width: 10, height: 10 }} />
       <Icon icon='user_star_yellow' style={{ width: 10, height: 10 }} />

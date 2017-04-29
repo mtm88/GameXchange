@@ -1,7 +1,7 @@
-import GameBox from './gameBox';
-import Details from './details';
+import Top from './top';
+import Middle from './middle';
 
 export {
-  GameBox,
-  Details
+  Top,
+  Middle,
 };

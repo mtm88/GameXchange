@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { header } from './../../config/styles';
 import { Back } from './../../components/navigation';
 
-import { GameBox, Details } from './../../components/offerDetails'
+import { Top, Middle } from './../../components/offerDetails'
 
 import styles from './styles';
 
@@ -24,11 +24,18 @@ export default class OfferDetails extends Component {
   };
 
   render() {
+    console.log(this.params);
     return (
       <View style={styles.background}>
         <View style={styles.top}>
-          <GameBox image={this.params.image} />
-          <Details />
+          <Top
+            image={this.params.image}
+            title={this.params.title}
+            user={this.params.user}
+            added={this.params.added}
+            finish={this.params.finish}
+          />
+          <Middle />
         </View>
       </View>
     );

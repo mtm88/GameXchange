@@ -1,14 +1,14 @@
 import React from 'react';
 import { View } from 'react-native';
-import Icon from './../../../../icon';
-import AppText from './../../../../appText';
+import Icon from './../icon';
+import AppText from './../appText';
 
 import styles from './styles';
 
 const Username = (props) => {
   return (
-    <View style={styles.username}>
-      <AppText style={{ fontSize: 11 }} numberOfLines={1}>
+    <View style={[styles.username, props.style]}>
+      <AppText style={props.textStyle} numberOfLines={1}>
         {props.user}
       </AppText>
     </View>

@@ -17,7 +17,7 @@ AppText.propTypes = {
 
 AppText.defaultProps = {
   style: {},
-  children: 'No Text passed',
+  children: 'No data passed',
 };
 
 

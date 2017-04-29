@@ -54,6 +54,8 @@ const dataSet = [
     user: 'User 1',
     exchangeFor: 'Diablo 3, Chronicles, Bloodbourne',
     platform: 'ps4',
+    added: '21-04-2017',
+    finish: '11-08-2017',
   },
   {
     title: 'GTA V',
@@ -61,6 +63,8 @@ const dataSet = [
     user: 'User 2',
     exchangeFor: 'Diablo 3',
     platform: 'xbox',
+    added: '21-04-2017',
+    finish: '11-08-2017',
   },
   {
     title: 'Middle-earth: Shadow of Mordor',
@@ -68,5 +72,7 @@ const dataSet = [
     user: 'ZdzisekKB',
     exchangeFor: 'World of Warcraft, Final Fantasy XXV',
     platform: 'ps4',
+    added: '21-04-2017',
+    finish: '11-08-2017',
   },
 ]

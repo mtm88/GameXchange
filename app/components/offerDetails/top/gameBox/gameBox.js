@@ -23,7 +23,7 @@ GameBox.defaultProps = {
 export default GameBox;
 
 const boxesMap = {
-  'fallout4': require('./../../../img/boxes/fallout4.jpg'),
-  'gta5': require('./../../../img/boxes/gta5.jpg'),
-  'shadowofmordor': require('./../../../img/boxes/shadowofmordor.jpg'),
+  'fallout4': require('./../../../../img/boxes/fallout4.jpg'),
+  'gta5': require('./../../../../img/boxes/gta5.jpg'),
+  'shadowofmordor': require('./../../../../img/boxes/shadowofmordor.jpg'),
 };

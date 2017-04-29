@@ -1,10 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  details: {
-    flex: 2,
+  finish: {
+    flexDirection: 'row',
+    marginBottom: 6,
   },
-  title: {
-    flex: 1,
-  }
 });

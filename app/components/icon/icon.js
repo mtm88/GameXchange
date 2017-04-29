@@ -29,4 +29,8 @@ const icons = {
   'user_star_white': require('./../../icons/user_star_white.png'),
   'missingicon': require('./../../icons/missingicon.png'),
   'nav_back': require('./../../icons/nav_back.png'),
+  'game': require('./../../icons/game_title.png'),
+  'user': require('./../../icons/user_icon.png'),
+  'added': require('./../../icons/added_icon.png'),
+  'finish': require('./../../icons/finish_icon.png'),
 }

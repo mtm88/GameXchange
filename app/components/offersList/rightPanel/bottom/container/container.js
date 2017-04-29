@@ -3,8 +3,8 @@ import { View } from 'react-native';
 import Menu from './../menu';
 import LocationIcon from './../locationIcon';
 import LocationText from './../locationText';
-import Username from './../username';
-import UserRating from './../userRating';
+import Username from './../../../../username';
+import UserRating from './../../../../userRating';
 import styles from './styles';
 
 const Bottom = (props) => {
@@ -18,7 +18,7 @@ const Bottom = (props) => {
       </View>
 
       <View style={styles.subcontainerRight}>
-        <Username user={props.user} />
+        <Username user={props.user} textStyle={{ fontSize: 12 }} />
         <UserRating />
       </View>
 
