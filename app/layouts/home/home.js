@@ -5,7 +5,7 @@ import Button from './../../components/button';
 import MyAccount from './../myAccount';
 
 import styles from './styles';
-import { header } from './../../config/styles';
+import { headerStyle } from './../../config/styles';
 
 export default class Home extends Component {
   constructor(props) {
@@ -14,9 +14,9 @@ export default class Home extends Component {
 
   static navigationOptions = {
     title: 'Home',
-    headerTintColor: header.headerTintColor,
-    headerStyle: header.headerStyle,
-    headerTitleStyle: header.headerTitleStyle,
+    headerTintColor: headerStyle.headerTintColor,
+    headerStyle: headerStyle.headerStyle,
+    headerTitleStyle: headerStyle.headerTitleStyle,
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('./../../icons/home.png')}

@@ -10,7 +10,7 @@ const defaultStyles = {
   },
 };
 
-const header = {
+const headerStyle = {
   headerTintColor: '#FFF',
   headerStyle: {
     backgroundColor: '#000',
@@ -22,6 +22,6 @@ const header = {
   }
 }
 
-export { defaultStyles, header };
+export { defaultStyles, headerStyle };
 
 

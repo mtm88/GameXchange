@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { header } from './../../config/styles';
+import { headerStyle } from './../../config/styles';
 import { Back } from './../../components/navigation';
 
 import { Top, Middle, Bottom } from './../../components/offerDetails'
@@ -16,9 +16,9 @@ export default class OfferDetails extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: 'Offer Details',
-      headerTintColor: header.headerTintColor,
-      headerStyle: header.headerStyle,
-      headerTitleStyle: header.headerTitleStyle,
+      headerTintColor: headerStyle.headerTintColor,
+      headerStyle: headerStyle.headerStyle,
+      headerTitleStyle: headerStyle.headerTitleStyle,
       headerLeft: Back(navigation),
     }
   };

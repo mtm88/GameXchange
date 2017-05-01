@@ -1,40 +1,79 @@
 import React, { Component } from 'react';
 import { Text, View, ListView, StyleSheet } from 'react-native';
-import styles from './styles';
-import { header } from './../../config/styles';
 import ListRow from './../../components/offersList/listRow';
+import Header from './../../components/offersList/header';
 import { Back } from './../../components/navigation';
+
+import styles from './styles';
+import { headerStyle } from './../../config/styles';
+
+const { fetchOffersList } = require('./../../services/couch');
+
+const separator = StyleSheet.create({
+  /*
+   * Removed for brevity
+   */
+  separator: {
+    flex: 1,
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: '#8E8E8E',
+  },
+});
 
 export default class GameList extends Component {
   constructor({ navigation }) {
     super();
     this.navigation = navigation;
-    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
-      dataSource: ds.cloneWithRows(this._cloneDataSet()),
-    };
-  }
+      test: 0,
+    }
+  };
 
   static navigationOptions = ({ navigation }) => ({
     title: 'Offers',
-    headerTintColor: header.headerTintColor,
-    headerStyle: header.headerStyle,
-    headerTitleStyle: header.headerTitleStyle,
+    headerTintColor: headerStyle.headerTintColor,
+    headerStyle: headerStyle.headerStyle,
+    headerTitleStyle: headerStyle.headerTitleStyle,
     headerLeft: Back(navigation),
   });
 
+  componentWillMount() {
+    this.dataSet = fetchOffersList();
+    this.setState({
+      dataSource: this.ds.cloneWithRows(this.dataSet),
+    });
+  }
+
+  updateState = (filteredResults) => {
+    this.setState((prevState) => ({
+      dataSource: this.ds.cloneWithRows(filteredResults),
+    }));
+  }
   render() {
     return (
       <View style={styles.background}>
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={(data) => <ListRow {...data} navigation={this.navigation} />}
-        />
-      </View>
+        <Header updateState={this.updateState} dataSet={this.dataSet} />
+        <View style={{ flex: 15 }}>
+          <ListView
+            dataSource={this.state.dataSource}
+            renderRow={(data) => (
+              <ListRow
+                {...data}
+                navigation={this.navigation}
+              />
+            )}
+            renderSeparator={(sectionId, rowId) => (
+              <View key={rowId} style={separator.separator} />
+            )
+            }
+          />
+        </View>
+      </View >
     )
   }
 
-  _cloneDataSet() {
+  _cloneDataSet(dataSet) {
     const clonedDataSet = [];
 
     for (let i = 0; i < 20; i += 1) {
@@ -47,32 +86,3 @@ export default class GameList extends Component {
 
 }
 
-const dataSet = [
-  {
-    title: 'Fallout 4',
-    image: 'fallout4',
-    user: 'User 1',
-    exchangeFor: ['Diablo 3', 'World of Warcraft', 'Final Fantasy XXV', 'World of Warcraft', 'Chronicles', 'Bloodbourne', 'World of Warcraft', 'Final Fantasy XXV', 'World of Warcraft'],
-    platform: 'ps4',
-    added: '21-04-2017',
-    finish: '11-08-2017',
-  },
-  {
-    title: 'GTA V',
-    image: 'gta5',
-    user: 'User 2',
-    exchangeFor: ['Diablo 3', 'Diablo 3', 'Chronicles', 'Bloodbourne', 'World of Warcraft', 'Final Fantasy XXV', 'World of Warcraft'],
-    platform: 'xbox',
-    added: '21-04-2017',
-    finish: '11-08-2017',
-  },
-  {
-    title: 'Middle-earth: Shadow of Mordor',
-    image: 'shadowofmordor',
-    user: 'ZdzisekKB',
-    exchangeFor: ['World of Warcraft', 'Final Fantasy XXV', 'World of Warcraft', 'Final Fantasy XXV'],
-    platform: 'ps4',
-    added: '21-04-2017',
-    finish: '11-08-2017',
-  },
-]

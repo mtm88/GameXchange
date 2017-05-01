@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Text, Image, View } from 'react-native';
 import styles from './styles';
-import { header } from './../../config/styles';
+import { headerStyle } from './../../config/styles';
 
 class MyAccount extends React.Component {
   constructor(props) {
@@ -11,9 +11,9 @@ class MyAccount extends React.Component {
 
   static navigationOptions = {
     title: 'My Account',
-    headerTintColor: header.headerTintColor,
-    headerStyle: header.headerStyle,
-    headerTitleStyle: header.headerTitleStyle,
+    headerTintColor: headerStyle.headerTintColor,
+    headerStyle: headerStyle.headerStyle,
+    headerTitleStyle: headerStyle.headerTitleStyle,
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('./../../icons/account.png')}
