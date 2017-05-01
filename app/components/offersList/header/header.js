@@ -3,27 +3,23 @@ import { View, TextInput } from 'react-native';
 
 import styles from './styles';
 
-class Header extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <TextInput
-          style={styles.input}
-          placeholder="Search..."
-          onChangeText={(text) => {
-            const filteredResults = this.filterRows(text, this.props.dataSet);
-            debugger;
-            this.props.updateState(filteredResults);
-          }}
-        />
-      </View>
-    );
-  }
+const Header = (props) => {
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.input}
+        placeholder="Start typing to filter..."
+        onChangeText={(text) => {
+          const filteredResults = filterRows(text, props.dataSet);
+          props.updateState(filteredResults);
+        }}
+      />
+    </View>
+  );
+};
 
-  filterRows(searchText, dataSet) {
-    return dataSet.filter((record) => record.title.includes(searchText));
-  }
+function filterRows(searchText, dataSet) {
+  return dataSet.filter((record) => record.title.toLowerCase().includes(searchText.toLowerCase()));
 }
-
 
 export default Header;

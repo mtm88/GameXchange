@@ -3,22 +3,13 @@ import { Text, View, ListView, StyleSheet } from 'react-native';
 import ListRow from './../../components/offersList/listRow';
 import Header from './../../components/offersList/header';
 import { Back } from './../../components/navigation';
+import Separator from './../../components/separator';
 
 import styles from './styles';
 import { headerStyle } from './../../config/styles';
 
 const { fetchOffersList } = require('./../../services/couch');
 
-const separator = StyleSheet.create({
-  /*
-   * Removed for brevity
-   */
-  separator: {
-    flex: 1,
-    height: StyleSheet.hairlineWidth,
-    backgroundColor: '#8E8E8E',
-  },
-});
 
 export default class GameList extends Component {
   constructor({ navigation }) {
@@ -63,10 +54,7 @@ export default class GameList extends Component {
                 navigation={this.navigation}
               />
             )}
-            renderSeparator={(sectionId, rowId) => (
-              <View key={rowId} style={separator.separator} />
-            )
-            }
+            renderSeparator={(sectionId, rowId) => <Separator sectionId={sectionId} rowId={rowId} />}
           />
         </View>
       </View >

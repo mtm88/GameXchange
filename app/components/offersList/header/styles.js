@@ -15,6 +15,5 @@ export default StyleSheet.create({
     paddingHorizontal: 8,
     fontSize: 15,
     backgroundColor: '#FFF',
-    borderRadius: 2,
   },
 });
