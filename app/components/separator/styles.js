@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
 
-const separator = {
-  flex: 1,
+const separatorStyle = {
+  display: 'flex',
   height: StyleSheet.hairlineWidth,
   backgroundColor: '#8E8E8E',
 };
 
 export {
-  separator,
+  separatorStyle,
 };
 
 

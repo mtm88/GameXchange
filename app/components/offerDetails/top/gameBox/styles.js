@@ -5,8 +5,8 @@ export default StyleSheet.create({
     flex: 1,
   },
   image: {
-    height: 120,
-    width: 82,
+    width: 90,
+    height: 140,
     marginLeft: 20,
   },
 });

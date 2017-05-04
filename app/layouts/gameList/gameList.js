@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, ListView, StyleSheet } from 'react-native';
+import { Text, View, ListView } from 'react-native';
 import ListRow from './../../components/offersList/listRow';
 import Header from './../../components/offersList/header';
 import { Back } from './../../components/navigation';

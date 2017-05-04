@@ -36,7 +36,9 @@ export default class OfferDetails extends Component {
           />
         </View>
         <View style={styles.middle}>
-          <Middle />
+          <Middle
+            exchangeFor={this.params.exchangeFor}
+          />
         </View>
         <View style={styles.bottom}>
           <Bottom />

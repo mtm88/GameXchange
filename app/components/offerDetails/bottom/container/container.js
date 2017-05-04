@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
+import Separator from './../../../../components/separator';
+import SeparatorText from './../../../../components/separatorText';
+
 import styles from './styles';
 
-import { GiftedChat } from 'react-native-gifted-chat';
+import { GiftedChat, Bubble } from 'react-native-gifted-chat';
 
 class Bottom extends Component {
   constructor(props) {
     super(props);
     this.state = { messages: [] };
     this.onSend = this.onSend.bind(this);
+    this.renderBubble = this.renderBubble.bind(this);
   }
 
   componentWillMount() {
@@ -38,14 +42,30 @@ class Bottom extends Component {
   render() {
     return (
       <View style={styles.container}>
+        {/*<Separator />*/}
+        <SeparatorText>CHAT</SeparatorText>
         <GiftedChat
           messages={this.state.messages}
           onSend={this.onSend}
           user={{
             _id: 1,
           }}
+          renderBubble={this.renderBubble}
         />
       </View>
+    );
+  }
+
+  renderBubble(props) {
+    return (
+      <Bubble
+        {...props}
+        wrapperStyle={{
+          left: {
+            backgroundColor: '#f0f0f0',
+          }
+        }}
+      />
     );
   }
 

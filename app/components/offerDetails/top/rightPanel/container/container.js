@@ -5,6 +5,8 @@ import Title from './../title';
 import Owner from './../owner';
 import Added from './../added';
 import Finish from './../finish';
+import OfferButtons from './../offerButtons';
+import Button from './../../../../button';
 
 const RightPanel = (props) => {
   return (
@@ -13,7 +15,8 @@ const RightPanel = (props) => {
       <Owner user={props.user} />
       <Added added={props.added} />
       <Finish finish={props.finish} />
-    </View>
+      <OfferButtons />
+    </View >
   );
 };
 
