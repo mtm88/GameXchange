@@ -7,13 +7,6 @@ import MyAccount from './../myAccount';
 import styles from './styles';
 import { headerStyle } from './../../config/styles';
 
-const FBSDK = require('react-native-fbsdk');
-const {
-  LoginButton,
-  AppEventsLogger,
-} = FBSDK;
-
-
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -48,23 +41,6 @@ export default class Home extends Component {
           textStyles={styles.buttonText}
           onPress={() => navigate('GameList')}
         />
-
-        <LoginButton
-          publishPermissions={["publish_actions"]}
-          onLoginFinished={
-            (error, result) => {
-              debugger;
-              if (error) {
-                alert("Login failed with error: " + result.error);
-              } else if (result.isCancelled) {
-                alert("Login was cancelled");
-              } else {
-                AppEventsLogger.logEvent('FB user logged in');
-                alert("Login was successful with permissions: " + result.grantedPermissions)
-              }
-            }
-          }
-          onLogoutFinished={() => alert("User logged out")}/>
       </View>
     );
   }
