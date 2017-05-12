@@ -7,7 +7,7 @@ import GameList from './../layouts/gameList';
 import OfferDetails from './../layouts/offerDetails';
 
 
-const Routes = StackNavigator({
+export const HomeTabs = StackNavigator({
   Home: { screen: homeTabs },
   GameList: { screen: GameList },
   OfferDetails: { screen: OfferDetails },
@@ -16,4 +16,3 @@ const Routes = StackNavigator({
     headerMode: 'float',
   });
 
-export default Routes;
