@@ -1,29 +1,36 @@
-import React, { Component } from 'react';
+'use strict'
 
-import { addNavigationHelpers } from 'react-navigation';
-import { HomeTabs } from './../navigationConfiguration';
+// React
+import React from 'react'
 
-import { connect } from 'react-redux';
+// Navigation
+import { addNavigationHelpers } from 'react-navigation'
+import { StackNavConfig } from '../navigationConfiguration'
+
+//Redux
+import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
   return {
-    navigationState: state.homeTabs,
+    navigationState: state.stackNav,
   }
 }
 
-class StackNavigation extends Component {
+class StackNavigation extends React.Component {
+
   render() {
-    const { dispatch, navigationState } = this.props;
+    const { dispatch, navigationState } = this.props
     return (
-      <HomeTabs navigation={
-        addNavigationHelpers({
-          dispatch,
-          state: navigationState,
-        })
-      }
+      <StackNavConfig
+        navigation={
+          addNavigationHelpers({
+            dispatch,
+            state: navigationState,
+          })
+        }
       />
-    );
+    )
   }
 }
 
-export default connect(mapStateToProps)(StackNavigation);
+export default connect(mapStateToProps)(StackNavigation)

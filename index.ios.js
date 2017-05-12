@@ -3,7 +3,7 @@ import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './app/store';
 // import StackNavigation from './app/navigation/stackNavigation/stackNavigation';
-import TabBarNavigation from './app/navigation/tabBarNavigation/views/TabBarNavigation';
+import StackNavigation from './app/navigation/stackNavigation/views/StackNavigation';
 
 // import PouchDB from 'pouchdb-react-native';
 
@@ -11,7 +11,7 @@ class GameXChange extends Component {
   render() {
     return (
       <Provider store={store}>
-        <TabBarNavigation />
+        <StackNavigation />
       </Provider>
     );
   }

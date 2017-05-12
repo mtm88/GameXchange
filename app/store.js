@@ -7,7 +7,7 @@ import { createLogger } from 'redux-logger';
 
 // import { HomeTabs } from './navigation/tabBarNavigation/navigationConfiguration';
 import { NavigatorTabOne } from './navigation/tabOne/navigationConfiguration'
-import { TabBar, tabBarReducer } from './navigation/tabBarNavigation/navigationConfiguration';
+import { StackNavConfig } from './navigation/stackNavigation/navigationConfiguration';
 
 const middleware = () => {
   return applyMiddleware(createLogger());
@@ -15,7 +15,7 @@ const middleware = () => {
 
 export default createStore(
   combineReducers({
-    tabBar: tabBarReducer,
+    stackNav: (state, action) => StackNavConfig.router.getStateForAction(action, state),
     tabOne: (state, action) => NavigatorTabOne.router.getStateForAction(action, state),
   }),
   middleware(),

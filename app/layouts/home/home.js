@@ -29,22 +29,20 @@ export default class Home extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <Provider store={store}>
-        <View style={styles.background}>
-          <Text style={styles.welcomeText}>I would like to:</Text>
-          <Button
-            text={'Get rid of my game(s)'}
-            containerStyles={styles.buttons}
-            textStyles={styles.buttonText}
-          />
-          <Button
-            text={'Browse offers'}
-            containerStyles={styles.buttons}
-            textStyles={styles.buttonText}
-            onPress={() => navigate('GameList')}
-          />
-        </View>
-      </Provider>
+      <View style={styles.background}>
+        <Text style={styles.welcomeText}>I would like to:</Text>
+        <Button
+          text={'Get rid of my game(s)'}
+          containerStyles={styles.buttons}
+          textStyles={styles.buttonText}
+        />
+        <Button
+          text={'Browse offers'}
+          containerStyles={styles.buttons}
+          textStyles={styles.buttonText}
+          onPress={() => navigate('GameList')}
+        />
+      </View>
     );
   }
 }
