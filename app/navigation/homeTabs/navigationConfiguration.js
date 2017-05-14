@@ -4,13 +4,23 @@ import { TabNavigator } from 'react-navigation';
 import HomeView from './views/homeView';
 import MyAccountView from './views/myAccountView';
 
-import { tabBarOptions } from './styles';
+const tabBarOptions = {
+  activeTintColor: '#e50606',
+  inactiveTintColor: '#FFF',
+  activeBackgroundColor: '#000',
+  inactiveBackgroundColor: '#000',
+  labelStyle: {
+    fontSize: 9,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+};
 
-const HomeTabs = TabNavigator({
-  Home: { screen: HomeView },
+const routeConfigs = {
+  TabHome: { screen: HomeView },
   MyAccount: { screen: MyAccountView },
-}, {
-    tabBarOptions: tabBarOptions,
-  });
+};
+
+const HomeTabs = TabNavigator(routeConfigs, tabBarOptions);
 
 export default HomeTabs;
