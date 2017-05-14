@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
 import { Text, View, Image } from 'react-native';
 
-import Button from './../../components/button';
-import MyAccount from './../myAccount';
+import Button from './../../../../components/button';
 
 import styles from './styles';
-import { headerStyle } from './../../config/styles';
+import { headerStyle } from './../../../../config/styles';
 
-export default class Home extends Component {
+export default class HomeView extends Component {
   constructor(props) {
     super(props);
   }
@@ -20,7 +18,7 @@ export default class Home extends Component {
     headerTitleStyle: headerStyle.headerTitleStyle,
     tabBarIcon: ({ tintColor }) => (
       <Image
-        source={require('./../../icons/home.png')}
+        source={require('./../../../../icons/home.png')}
         style={[styles.icon, { tintColor: tintColor }]}
       />
     ),

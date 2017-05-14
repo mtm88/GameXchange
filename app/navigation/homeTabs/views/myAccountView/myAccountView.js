@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { Text, Image, View } from 'react-native';
 import styles from './styles';
-import { headerStyle } from './../../config/styles';
+import { headerStyle } from './../../../../config/styles';
 
-class MyAccount extends React.Component {
+class MyAccountView extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,7 +16,7 @@ class MyAccount extends React.Component {
     headerTitleStyle: headerStyle.headerTitleStyle,
     tabBarIcon: ({ tintColor }) => (
       <Image
-        source={require('./../../icons/account.png')}
+        source={require('./../../../../icons/account.png')}
         style={[styles.icon, { tintColor: tintColor }]}
       />
     ),
@@ -32,4 +32,4 @@ class MyAccount extends React.Component {
   }
 }
 
-export default MyAccount;
+export default MyAccountView;
