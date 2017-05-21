@@ -5,20 +5,6 @@ import styles from './styles';
 import { headerStyle } from './../../../../config/styles';
 
 class MyAccountView extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require('./../../../../icons/account.png')}
-        style={[styles.icon, { tintColor: tintColor }]}
-      />
-    ),
-
-  };
-
   render() {
     debugger;
     return (

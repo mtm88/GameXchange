@@ -1,9 +1,9 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
 
-import StackNavConfig from './navigation/stackNavigation/navigationConfiguration';
-import HomeTabs from './navigation/homeTabs/navigationConfiguration';
-import GameList from './navigation/stackNavigation/views/gameList/navigationConfiguration';
+import TabBar from './navigation/tabBar/navigationConfiguration';
+import HomeTabNavigation from './navigation/homeTabNavigation/navigationConfiguration';
+import MyAccountTabNavigation from './navigation/myAccountTabNavigation/navigationConfiguration';
 
 const middleware = () => {
   return applyMiddleware(createLogger());
@@ -11,9 +11,10 @@ const middleware = () => {
 
 export default createStore(
   combineReducers({
-    stackNav: (state, action) => StackNavConfig.router.getStateForAction(action, state),
-    homeTabs: (state, action) => HomeTabs.router.getStateForAction(action, state),
-    gameList: (state, action) => GameList.router.getStateForAction(action, state),
+    tabBar: (state, action) => TabBar.router.getStateForAction(action, state),
+    homeTabNavigation: (state, action) => HomeTabNavigation.router.getStateForAction(action, state),
+    myAccountTabNavigation: (state, action) => MyAccountTabNavigation.router.getStateForAction(action, state),
+
   }),
   middleware(),
 )

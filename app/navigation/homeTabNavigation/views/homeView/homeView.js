@@ -6,19 +6,14 @@ import Button from './../../../../components/button';
 import styles from './styles';
 import { headerStyle } from './../../../../config/styles';
 
-export default class HomeView extends Component {
-  constructor(props) {
-    super(props);
+const mapStateToProps = (state) => {
+  return {
+    navigationState: state.tabOne
   }
-
+}
+export default class HomeView extends Component {
   static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require('./../../../../icons/home.png')}
-        style={[styles.icon, { tintColor: tintColor }]}
-      />
-    ),
-  };
+  }
 
   render() {
     const { navigate } = this.props.navigation;
