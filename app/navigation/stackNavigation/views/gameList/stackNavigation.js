@@ -1,21 +1,21 @@
 'use strict'
 import React from 'react'
 import { addNavigationHelpers } from 'react-navigation'
-import { StackNavConfig } from '../navigationConfiguration'
+import GameListNavigation from './navigationConfiguration'
 
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
   return {
-    navigationState: state.stackNav,
+    navigationState: state.gameList,
   }
 }
 
-class StackNavigation extends React.Component {
+class GameList extends React.Component {
   render() {
     const { dispatch, navigationState } = this.props
     return (
-      <StackNavConfig
+      <GameListNavigation
         navigation={
           addNavigationHelpers({
             dispatch,
@@ -27,4 +27,4 @@ class StackNavigation extends React.Component {
   }
 }
 
-export default connect(mapStateToProps)(StackNavigation)
+export default connect(mapStateToProps)(GameList)

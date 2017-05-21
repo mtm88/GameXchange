@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Text, View, ListView } from 'react-native';
-import ListRow from './../../components/offersList/listRow';
-import Header from './../../components/offersList/header';
-import { Back } from './../../components/navigation';
-import Separator from './../../components/separator';
+import ListRow from './../../../../../../components/offersList/listRow';
+import Header from './../../../../../../components/offersList/header';
+import { Back } from './../../../../../../components/navigation';
+import Separator from './../../../../../../components/separator';
 
 import styles from './styles';
-import { headerStyle } from './../../config/styles';
+import { headerStyle } from './../../../../../../config/styles';
 
-const { fetchOffersList } = require('./../../services/couch');
+const { fetchOffersList } = require('./../../../../../../services/couch');
 
 
-export default class GameList extends Component {
+export default class List extends Component {
   constructor({ navigation }) {
     super();
     this.navigation = navigation;

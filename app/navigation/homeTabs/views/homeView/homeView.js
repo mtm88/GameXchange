@@ -12,10 +12,6 @@ export default class HomeView extends Component {
   }
 
   static navigationOptions = {
-    title: 'Home',
-    headerTintColor: headerStyle.headerTintColor,
-    headerStyle: headerStyle.headerStyle,
-    headerTitleStyle: headerStyle.headerTitleStyle,
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('./../../../../icons/home.png')}
