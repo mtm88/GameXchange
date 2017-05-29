@@ -8,7 +8,7 @@ import { headerStyle } from './../../../../config/styles';
 
 const mapStateToProps = (state) => {
   return {
-    navigationState: state.tabOne
+    navigationState: state.homeTabNavigation,
   }
 }
 export default class HomeView extends Component {
@@ -29,7 +29,7 @@ export default class HomeView extends Component {
           text={'Browse offers'}
           containerStyles={styles.buttons}
           textStyles={styles.buttonText}
-          onPress={() => navigate('GameList')}
+          onPress={() => navigate('ListView')}
         />
       </View>
     );

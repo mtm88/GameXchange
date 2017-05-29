@@ -4,15 +4,19 @@ import { StackNavigator } from 'react-navigation'
 
 // Screens
 import HomeView from './views/homeView'
+import List from './views/listView'
+import OfferDetails from './views/offerDetailsView'
 
 const routeConfiguration = {
   HomeView: { screen: HomeView },
+  ListView: { screen: List },
+  OfferDetails: { screen: OfferDetails },
 }
 
-// going to disable the header for now
 const stackNavigatorConfiguration = {
-  headerMode: 'none',
-  initialRouteName: 'HomeView'
+  initialRouteName: 'HomeView',
+  mode: 'card',
+  headerMode: 'float',
 }
 
 const HomeTabNavigator = StackNavigator(routeConfiguration, stackNavigatorConfiguration);

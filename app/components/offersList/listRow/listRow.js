@@ -6,7 +6,7 @@ import styles from './styles';
 
 const ListRow = (props) => {
   return (
-    <TouchableHighlight onPress={() => props.navigation.navigate('OfferDetails', props)}>
+    <TouchableHighlight onPress={() => props.onPress(props)}>
       <View style={styles.container}>
         <GameBox image={props.image} />
         <RightPanel title={props.title} platform={props.platform} user={props.user} exchangeFor={props.exchangeFor} />

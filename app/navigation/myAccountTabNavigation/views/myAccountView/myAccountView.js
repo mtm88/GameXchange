@@ -6,7 +6,6 @@ import { headerStyle } from './../../../../config/styles';
 
 class MyAccountView extends Component {
   render() {
-    debugger;
     return (
       <View style={styles.background}>
         <Text>Profile screen</Text>

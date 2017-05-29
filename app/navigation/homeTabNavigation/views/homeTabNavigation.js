@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
 }
 
 class HomeTabNavigation extends Component {
-  static navigationOptions = {
+  static navigationOptions = ({
     tabBarLabel: 'Home',
     tabBarIcon: ({ tintColor }) => (
       <Image
@@ -27,10 +27,10 @@ class HomeTabNavigation extends Component {
         style={[styles.icon, { tintColor: tintColor }]}
       />
     ),
-  }
+  })
 
   render() {
-    const { navigationState, dispatch } = this.props
+    const { navigationState, dispatch } = this.props;
     return (
       <HomeTabNavigator
         navigation={
@@ -43,4 +43,4 @@ class HomeTabNavigation extends Component {
     )
   }
 }
-export default connect(mapStateToProps)(HomeTabNavigation)
+export default connect(mapStateToProps)(HomeTabNavigation);

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Text, View, ListView } from 'react-native';
-import ListRow from './../../../../../../components/offersList/listRow';
-import Header from './../../../../../../components/offersList/header';
-import { Back } from './../../../../../../components/navigation';
-import Separator from './../../../../../../components/separator';
+import ListRow from './../../../../components/offersList/listRow';
+import Header from './../../../../components/offersList/header';
+import { Back } from './../../../../components/navigation';
+import Separator from './../../../../components/separator';
 
 import styles from './styles';
-import { headerStyle } from './../../../../../../config/styles';
+import { headerStyle } from './../../../../config/styles';
 
-const { fetchOffersList } = require('./../../../../../../services/couch');
+const { fetchOffersList } = require('./../../../../services/couch');
 
 
 export default class List extends Component {
@@ -16,9 +16,6 @@ export default class List extends Component {
     super();
     this.navigation = navigation;
     this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-    this.state = {
-      test: 0,
-    }
   };
 
   static navigationOptions = ({ navigation }) => ({
@@ -51,7 +48,10 @@ export default class List extends Component {
             renderRow={(data) => (
               <ListRow
                 {...data}
-                navigation={this.navigation}
+                onPress={(props) => this.props.navigation.navigate(
+                  'OfferDetails',
+                  props,
+                )}
               />
             )}
             renderSeparator={(sectionId, rowId) => <Separator sectionId={sectionId} rowId={rowId} />}

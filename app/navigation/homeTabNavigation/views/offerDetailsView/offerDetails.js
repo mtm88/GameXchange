@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { headerStyle } from './../../config/styles';
-import { Back } from './../../components/navigation';
+import { headerStyle } from './../../../../config/styles';
+import { Back } from './../../../../components/navigation';
 
-import { Top, Middle, Bottom } from './../../components/offerDetails'
+import { Top, Middle, Bottom } from './../../../../components/offerDetails'
 
 import styles from './styles';
 
 export default class OfferDetails extends Component {
-  constructor({ navigation }) {
-    super();
-    this.params = navigation.state.params;
-  }
 
   static navigationOptions = ({ navigation }) => {
     return {
@@ -24,20 +20,22 @@ export default class OfferDetails extends Component {
   };
 
   render() {
+    debugger;
+    const params = this.props.navigation.state.params;
     return (
       <View style={styles.background}>
         <View style={styles.top}>
           <Top
-            image={this.params.image}
-            title={this.params.title}
-            user={this.params.user}
-            added={this.params.added}
-            finish={this.params.finish}
+            image={params.image}
+            title={params.title}
+            user={params.user}
+            added={params.added}
+            finish={params.finish}
           />
         </View>
         <View style={styles.middle}>
           <Middle
-            exchangeFor={this.params.exchangeFor}
+            exchangeFor={params.exchangeFor}
           />
         </View>
         <View style={styles.bottom}>
